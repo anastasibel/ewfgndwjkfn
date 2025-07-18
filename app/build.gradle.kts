@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    kotlin("plugin.serialization") version "2.2.0"
 }
 
 android {
@@ -46,9 +45,7 @@ dependencies {
 
     //Retrofit
     implementation(libs.retrofit)
-
-    //Serialization
-    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.converter.gson)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

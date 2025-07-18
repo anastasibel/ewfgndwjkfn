@@ -1,7 +1,5 @@
 package com.example.products.domain.model
 
-import com.example.products.data.model.ProductSpecificationDto
-
 data class ProductModel(
     val id: Int,
     val categoryId: Int,
@@ -11,5 +9,5 @@ data class ProductModel(
     val image: String,
     val price: Int,
     val averageRating: Double,
-    val specifications: List<ProductSpecificationDto>,
+    val specifications: List<ProductSpecificationModel>,
 )
