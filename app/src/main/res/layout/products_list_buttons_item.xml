@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp">
+    android:padding="8dp">
 
     <Button
+        android:id="@+id/filter_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginEnd="8dp"
         android:drawableLeft="@drawable/ic_filter"
         android:text="@string/filter_text"
         tools:ignore="RtlHardcoded" />
 
     <Button
+        android:id="@+id/sort_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginStart="8dp"
         android:drawableEnd="@drawable/ic_sort"
         android:text="@string/sort_text" />
 
