@@ -3,6 +3,7 @@ package com.example.products.presentation.productsList
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.example.products.domain.ProductRepository
 import com.example.products.domain.model.ProductModel
@@ -23,6 +24,14 @@ class ProductsListViewModel @Inject constructor(
     private fun getProductsList() {
         viewModelScope.launch {
             _liveData.value = productsLstRepository.getProductsList()
+        }
+    }
+
+    class Factory(
+        private val productsLstRepository: ProductRepository
+    ) : ViewModelProvider.Factory {
+        override fun <T : ViewModel> create(modelClass: Class<T>): T {
+            return super.create(modelClass)
         }
     }
 }

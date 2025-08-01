@@ -46,6 +46,8 @@ dependencies {
 
     //ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation("androidx.fragment:fragment-ktx:1.8.8")
+
 
     //Retrofit
     implementation(libs.retrofit)
@@ -54,6 +56,9 @@ dependencies {
     //Dagger 2
     implementation (libs.dagger)
     kapt (libs.dagger.compiler)
+
+    //Glide
+    implementation(libs.glide)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
